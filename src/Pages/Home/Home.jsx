@@ -4,7 +4,8 @@ import Sidebar from '../../Component/Sidebar/Sidebar'
 import Navbar from '../../Component/Navbar/Navbar'
 import Widget from '../../Component/Widgets/Widget'
 import Featured from '../../Component/Featured/Featured'
-import Chart from '../../Component/Chart/Chart'
+import Table from '../../Component/Table/Table'
+
 function Home() {
   return (
     <div className='home'>
@@ -12,14 +13,21 @@ function Home() {
       <div className="homeContainer">
         <Navbar />
         <div className="widget">
-          <Widget type="users"/>
-          <Widget type="orders"/>
-          <Widget type="earnings"/>
-          <Widget type="balance"/>
+          <Widget type="users" />
+          <Widget type="orders" />
+          <Widget type="earnings" />
+          <Widget type="balance" />
         </div>
         <div className="charts">
-          <Featured/>
-          <Chart/>
+          <Featured />
+          {/* <Chart /> */}
+        </div>
+        <div className="listContainer">
+          <div className="ListTitle">
+            Latest Transations
+            <Table/>
+          </div>
+
         </div>
 
 
@@ -30,3 +38,4 @@ function Home() {
 }
 
 export default Home
+ 
